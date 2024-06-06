@@ -18,13 +18,14 @@ print_r($_POST);
                     echo "Wachtwoord is leeg";
                     exit;
                 }
+
                 if (
                     (empty($_POST['login']))) {
                         echo "Login is leeg";
                         exit;
                     }
 
-                $wachtwoord = $_POST['password'];
+                $wachtwoord = $_POST['wachtwoord'];
                 $login = $_POST['login'];
 
                 require 'database.php';
