@@ -24,12 +24,12 @@ print_r($_POST);
                         exit;
                     }
 
-                $password = $_POST['password'];
+                $wachtwoord = $_POST['password'];
                 $login = $_POST['login'];
 
                 require 'database.php';
 
-            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $sql = "SELECT * FROM account WHERE email = email";
             $result = mysqli_query($conn, $sql);
             $dbUser = mysqli_fetch_assoc($result);
             var_dump($dbUser);
