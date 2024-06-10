@@ -9,7 +9,7 @@ body {
 
 .welkom {
     margin-left: 10%;
-    font-size: 130px;
+    font-size: 120px;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
@@ -25,4 +25,45 @@ nav {
     background-color: white;
     font-size: 30px;
     margin-left: 50%;
+}
+
+.form_registration
+{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+
+}
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.header .navbar {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 130px;
+}
+.header .navbar li {
+    display: inline;
+}
+.header .search-bar {
+    display: flex;
+    align-items: center;
+}
+.header .search-bar input[type="text"] {
+    padding: 5px;
+}
+.header .search-bar button {
+    padding: 5px 10px;
 }

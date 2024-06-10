@@ -5,27 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHolidays</title>
-    <link rel="icon" href="C:\Project\project-blok4\images\logo.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+<div class="header">
+<div class="logo">
+    <a href="holidays.php">
+        <img src="images/banner.png" alt="logo">
+    </a>
+</div>
 
-    <header>
-        <div class="banner">
-            <img src="images/banner.png" alt="logo">
+        <ul class="navbar">
+            <li><a href="holidays.php">Vakanties</a></li>
+            <li><a href="login.php">Inloggen</a></li>
+            <li><a href="registration.php">Registratie</a></li>
+            <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        </ul>
+        <div class="search-bar">
+            <form action="searchbar.phpq" method="get">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
         </div>
+    </div>
     </header>
-    <nav class="navbar">
-        <a href="holidays.php">Overzicht vakanties</a>
-        <a href="login.php">Inloggen</a>
-        <a href="logout.php">Uitloggen</a>
-        <a href="registration.php">Registratie</a>
-    </nav>
+    <br>
     <div class="welkom">
     <a>Welkom op de website!</a>
     </div>
+    <br><br><br>
     <div class="welkom2"
     <a> We zijn erg blij dat u hier bent, we hebben een paar mooie vakanties klaar staan die precies aan uw eisen voldoen.</a>
 </div>

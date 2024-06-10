@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <a href="">Overzicht tools</a>
-        <a href="">Huidige pagina</a>
-        <a href=""> Registratie</a>
-        <a href="">Login</a>
-        
-    </ul>
-</nav>
+
+<div class="header">
+<div class="logo">
+    <a href="holidays.php">
+        <img src="images/banner.png" alt="logo">
+    </a>
+</div>
+
+        <ul class="navbar">
+            <li><a href="holidays.php">Vakanties</a></li>
+            <li><a href="login.php">Inloggen</a></li>
+            <li><a href="registration.php">Registratie</a></li>
+            <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        </ul>
+        <div class="search-bar">
+            <form action="searchbar.phpq" method="get">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>  
+
     <h1>Login</h1>
 
     <form action="login_process.php" method="post">

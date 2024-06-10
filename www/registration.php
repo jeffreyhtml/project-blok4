@@ -9,12 +9,27 @@
 </head>
 
 <body>
-<nav>
-    <ul>
+<div class="header">
+<div class="logo">
+    <a href="holidays.php">
+        <img src="images/banner.png" alt="logo">
+    </a>
+</div>
 
-        
-    </ul>
-</nav>
+        <ul class="navbar">
+            <li><a href="holidays.php">Vakanties</a></li>
+            <li><a href="login.php">Inloggen</a></li>
+            <li><a href="registration.php">Registratie</a></li>
+            <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        </ul>
+        <div class="search-bar">
+            <form action="searchbar.phpq" method="get">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+<div class="form_registration">
     <form action="registration_procces.php" method="post">
         <div>
             <label for="email">Email</label>
@@ -48,7 +63,9 @@
         <div>
             <button type="submit" name="submit">Registreer</button>
         </div>
+      
     </form>
+    </div>
 </body>
 
 </html>
