@@ -1,13 +1,12 @@
 <?php
-
 $host = 'mariadb';
 $user = 'root';
-$password =  'password';
+$password = 'password';
 $databaseName = 'myholidays';
 
-$conn = mysqli_connect($host, $user, $password, $databaseName,);
-
+$conn = mysqli_connect($host, $user, $password, $databaseName);
 
 if (mysqli_connect_error()) {
-} else {
+    die("Database connection failed: " . mysqli_connect_error());
 }
+?>
