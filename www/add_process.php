@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Klik op de onderstaande link om terug te gaan naar de homepagina,
-    <a href="holidays.php"></a>
 </body>
 </html><?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

@@ -32,7 +32,7 @@
     <h1>Login</h1>
 
     <form action="login_process.php" method="post">
-
+<div class="login_page">
     <div class="form-group">
 <label for="login">Login</label>
 <input type="login" name="login" id="login">
@@ -43,6 +43,6 @@
 <input type="wachtwoord" name="wachtwoord" id="wachtwoord">
 </div>
 <button type="submit">Inloggen</button>
-
+</div>
 </body>
 </html>

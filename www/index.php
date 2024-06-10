@@ -10,12 +10,12 @@
 </head>
 
 <body>
-<div class="header">
-<div class="logo">
-    <a href="holidays.php">
-        <img src="images/banner.png" alt="logo">
-    </a>
-</div>
+    <div class="header">
+        <div class="logo">
+            <a href="holidays.php">
+                <img src="images/banner.png" alt="logo">
+            </a>
+        </div>
 
         <ul class="navbar">
             <li><a href="holidays.php">Vakanties</a></li>
@@ -33,12 +33,14 @@
     </header>
     <br>
     <div class="welkom">
-    <a>Welkom op de website!</a>
+        <a>Welkom op de website!</a>
     </div>
     <br><br><br>
-    <div class="welkom2"
-    <a> We zijn erg blij dat u hier bent, we hebben een paar mooie vakanties klaar staan die precies aan uw eisen voldoen.</a>
-</div>
+    <div class="welkom2" <a> We zijn erg blij dat u hier bent, we hebben een paar mooie vakanties klaar staan die precies aan uw eisen voldoen.</a>
+        <br>
+        <a href="holidays.php">Klik hier om door te gaan!</a>
+    </div>
+
 </body>
 
 </html>

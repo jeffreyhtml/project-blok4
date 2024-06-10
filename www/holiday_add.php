@@ -33,7 +33,7 @@
         </div>
     </div>
     <br>
-
+    <div class="form_registration">
     <form action="add_process.php" method="post">
         <div class="form-group">
             <label for="land">land</label>
@@ -56,6 +56,7 @@
             <input type="number" name="prijs" id="prijs">
         </div>
         <button type="submit" name="submit">Upload een nieuwe vakantie</button>
+</div>
     </form>
 </body>
 
