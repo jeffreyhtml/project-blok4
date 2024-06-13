@@ -88,19 +88,21 @@ nav {
     height: 100%;
     object-fit: cover; /* Zorgt ervoor dat de afbeelding de gehele div vult */
     border-radius: 10px;
+    margin-left: 300px;
 }
 
 button {
-    position: absolute;
-    top: 50%;
+    position: sticky;
+    top: 40%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
+  border-radius: 50%;
     user-select: none;
+    
 }
 
 button.prev {
@@ -109,4 +111,9 @@ button.prev {
 
 button.next {
     right: 10px;
+}
+
+.lorum_ipsum {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: x-large;
 }

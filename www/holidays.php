@@ -26,12 +26,13 @@ $vakanties = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
     </div>
 
     <ul class="navbar">
-        <li><a href="holidays.php">Vakanties</a></li>
+    <li><a href="holidays.php">Vakanties</a></li>
         <li><a href="login.php">Inloggen</a></li>
         <li><a href="registration.php">Registratie</a></li>
         <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
         <li><a href="statistics.php">statistieken</a></li>
         <li><a href="user.php">Gebruiker</a></li>
+        <li><a href="over_ons.php">Over ons</a></li>
     </ul>
     <div class="search-bar">
         <form action="searchbar.phpq" method="get">
@@ -43,6 +44,7 @@ $vakanties = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
     <thead>
     </thead>
     <tbody>
+        <br>
         <div class="slider-container">
             <div class="slider">
                 <div class="slides">
@@ -50,11 +52,35 @@ $vakanties = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
                         <a href="holiday_detail.php">
                             <div class="slide"><img src="images/rialto.jpg" alt="$vakantieId"></div>
                         </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/portugal.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/curacao.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/boa_vista.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/turkije.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/bonaire.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/spanje.jpg" alt="$vakantieId"></div>
+                        </a>
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/italie.jpg" alt="$vakantieId"></div>
+                        </a>
                     </div>
                 </div>
                 <button class="prev" onclick="moveSlide(1)">&#10094;</button>
                 <button class="next" onclick="moveSlide(-1)">&#10095;</button>
             </div>
+        </div>
+        <div class="lorum_ipsum">
+        <p>Lorem ipsum dolor sit amet. Vel deserunt molestiae ut corporis neque id dolorum odio. Est debitis itaque At quasi illum qui galisum alias At commodi rerum est natus accusantium ab molestiae sint! Et veritatis itaque ut omnis error ea tempora amet in consequatur expedita rem earum fugit. Nam tempore officiis sit aperiam rerum et laboriosam temporibus ex consequatur voluptas eum repudiandae voluptate cum impedit alias? </p><p>Vel consequatur dolor et recusandae odio in similique culpa. In beatae iste qui veniam quam qui cumque autem ea illo quibusdam id dicta inventore in quasi internos? </p><p>Sed libero dolor ut magni officia ex quia doloremque qui autem voluptatum rem galisum fuga aut praesentium necessitatibus. Ut dignissimos omnis ut voluptate corporis et eaque praesentium. Sed accusamus illum ea quos officiis eum velit voluptatum et necessitatibus necessitatibus id voluptas iste ut perspiciatis fugit qui dolores eius. </p>
         </div>
         <script src="script.js"></script>
         <!-- 
