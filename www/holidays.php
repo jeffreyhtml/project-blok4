@@ -3,7 +3,7 @@
 require 'database.php';
 $sql = "SELECT * FROM vakantie";
 $vakantie = mysqli_query($conn, $sql);
-$vakantie = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
+$vakanties = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,11 +30,12 @@ $vakantie = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
         <li><a href="login.php">Inloggen</a></li>
         <li><a href="registration.php">Registratie</a></li>
         <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        <li><a href="statistics.php">statistieken</a></li>
+        <li><a href="user.php">Gebruiker</a></li>
     </ul>
     <div class="search-bar">
         <form action="searchbar.phpq" method="get">
             <input type="text" name="query" placeholder="Search...">
-            <button type="submit">Search</button>
         </form>
     </div>
 </div>
@@ -42,18 +43,28 @@ $vakantie = mysqli_fetch_all($vakantie, MYSQLI_ASSOC);
     <thead>
     </thead>
     <tbody>
-        <?php foreach ($vakantie as $vakantieId) : ?>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slider">
+                        <a href="holiday_detail.php">
+                            <div class="slide"><img src="images/rialto.jpg" alt="$vakantieId"></div>
+                        </a>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(-1)">&#10095;</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <!-- 
+        <?php foreach ($vakanties as $vakantie) : ?>
             <tr>
-                <td><?php echo $vakantieId['land'] ?></td>
-                <td><?php echo $vakantieId['prijs'] ?></td>
-                <td>
-                    <a href="holiday_detail.php">details</a>
-                </td>
                 <div class="afbeelding_vakantie">
-                    <td><img src="<?php echo $vakantieId['afbeelding'] ?>" alt=""></td>
+                    <td><a href="holiday_detail.php?id=<?php echo $vakantie['vakantieId'] ?>"><img src=" <?php echo $vakantie['afbeelding'] ?>" alt="Picture"></a></td>
                 </div>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach; ?> -->
 
     </tbody>
 </table>

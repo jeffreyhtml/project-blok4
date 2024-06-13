@@ -17,15 +17,17 @@
 </div>
 
         <ul class="navbar">
-            <li><a href="holidays.php">Vakanties</a></li>
-            <li><a href="login.php">Inloggen</a></li>
-            <li><a href="registration.php">Registratie</a></li>
-            <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        <li><a href="holidays.php">Vakanties</a></li>
+        <li><a href="login.php">Inloggen</a></li>
+        <li><a href="registration.php">Registratie</a></li>
+        <li><a href="holiday_add.php">Vakantie toevoegen</a></li>
+        <li><a href="statistics.php">statistieken</a></li>
+        <li><a href="user.php">Gebruiker</a></li>
         </ul>
         <div class="search-bar">
             <form action="searchbar.phpq" method="get">
                 <input type="text" name="query" placeholder="Search...">
-                <button type="submit">Search</button>
+
             </form>
         </div>
     </div>
