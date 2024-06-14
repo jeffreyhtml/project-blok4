@@ -1,39 +1,62 @@
 <?php
-print_r($_POST);
+// Start the session
+session_start();
 
-    if (
-        !isset($_POST['wachtwoord'])) {
-            echo "Deze sleutel bestaat niet";
-            exit;
-        }
+// Display posted data for debugging purposes
 
-        if (
-            (empty($_POST['login']))) {
-                echo "Email is leeg";
-                exit;
-            }
 
-            if (
-                (empty($_POST['wachtwoord']))) {
-                    echo "Wachtwoord is leeg";
-                    exit;
-                }
+// Check if 'wachtwoord' exists in the POST request
+if (!isset($_POST['wachtwoord'])) {
+    echo "Deze sleutel bestaat niet";
+    exit;
+}
 
-                if (
-                    (empty($_POST['login']))) {
-                        echo "Login is leeg";
-                        exit;
-                    }
+// Check if 'login' is empty
+if (empty($_POST['login'])) {
+    echo "Gebruikersnaam is leeg";
+    exit;
+}
 
-                $wachtwoord = $_POST['wachtwoord'];
-                $login = $_POST['login'];
+// Check if 'wachtwoord' is empty
+if (empty($_POST['wachtwoord'])) {
+    echo "Wachtwoord is leeg";
+    exit;
+}
 
-                require 'database.php';
+$login = $_POST['login'];
+$wachtwoord = $_POST['wachtwoord'];
 
-            $sql = "SELECT * FROM account WHERE email = email";
-            $result = mysqli_query($conn, $sql);
-            $dbUser = mysqli_fetch_assoc($result);
-            var_dump($dbUser);
+// Include database connection file
+require 'database.php';
 
-            echo "Je bent ingelogd.. YIPPEEE!";
-            exit;
+// Sanitize inputs to prevent SQL injection
+$login = mysqli_real_escape_string($conn, $login);
+$wachtwoord = mysqli_real_escape_string($conn, $wachtwoord);
+
+// Prepare and execute SQL query to fetch user data based on login
+$sql = "SELECT * FROM `user` JOIN account ON account.accountId = user.userId WHERE account.login = '$login'";
+$result = mysqli_query($conn, $sql);
+
+// Fetch the user data
+$dbUser = mysqli_fetch_assoc($result);
+
+// Check if user exists
+if ($dbUser) {
+    // Verify the password
+    if ($wachtwoord === $dbUser['wachtwoord']) {
+        // Set session variables
+        $_SESSION['user_id'] = $dbUser['userId'];
+        $_SESSION['login'] = $dbUser['login'];
+        // Redirect to holidays.php
+        header("Location: holidays.php");
+        exit();
+    } else {
+        echo "Ongeldig wachtwoord";
+    }
+} else {
+    echo "Gebruiker niet gevonden";
+}
+
+// Close the connection
+mysqli_close($conn);
+exit;
