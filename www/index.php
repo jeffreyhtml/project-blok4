@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +27,6 @@
         <li><a href="user.php">Gebruiker</a></li>
         <li><a href="over_ons.php">Over ons</a></li>
         </ul>
-        <div class="search-bar">
-            <form action="searchbar.phpq" method="get">
-                <input type="text" name="query" placeholder="Search...">
-            </form>
-        </div>
     </div>
     </header>
     <br>

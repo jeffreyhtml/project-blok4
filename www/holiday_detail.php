@@ -1,28 +1,28 @@
-<?php
+<?php session_start();
 
 require 'database.php';
 
-// Controleer of de vakantieId is meegegeven in de URL
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // SQL-query om de vakantiegegevens op te halen op basis van het meegegeven vakantieId
+ 
     $sql = "SELECT * FROM vakantie WHERE vakantieId = $id";
     $result = mysqli_query($conn, $sql);
 
-    // Controleer of er resultaten zijn gevonden
+    // Controleert of er resultaten zijn gevonden
     if ($result && mysqli_num_rows($result) > 0) {
-        // Haal de vakantiegegevens op
+        // Haalt de vakantiegegevens op
         $vakantie = mysqli_fetch_assoc($result);
     } else {
-        // Geen vakantie gevonden met het meegegeven vakantieId, doe hier iets mee, bijvoorbeeld een foutmelding tonen
+
         echo "Geen vakantie gevonden met het opgegeven ID.";
-        exit(); // Stop de verdere uitvoering van de pagina
+        exit(); 
     }
 } else {
-    // Als er geen vakantieId is meegegeven, doe hier iets mee, bijvoorbeeld een foutmelding tonen
+
     echo "Geen vakantie ID opgegeven.";
-    exit(); // Stop de verdere uitvoering van de pagina
+    exit(); 
 }
 ?>
 

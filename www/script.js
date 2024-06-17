@@ -1,22 +1,29 @@
 let slideIndex = 0;
 
+// Volgende slide
 function moveSlide(n) {
   showSlides(slideIndex += n);
 }
 
+// Huidige slide
 function showSlides(n) {
+  // Elementen met class slide
   const slides = document.getElementsByClassName("slide");
+  
   if (n >= slides.length) {
     slideIndex = 0;
   }
   if (n < 0) {
     slideIndex = slides.length - 1;
   }
+  
+  // Verbergt de slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  
+  // de huidige slide
   slides[slideIndex].style.display = "block";
 }
-
-// Voeg de volgende regel toe om elke 3 seconden naar de volgende dia te gaan
+// De tijd tussen bewegingen
 setInterval(() => moveSlide(1), 3000);
